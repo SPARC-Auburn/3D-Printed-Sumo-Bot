@@ -32,7 +32,7 @@ An initial development of a cheap 3D printed sumo robot to serve as a base desig
 * 2 downward facing line detection sensors
 * 1 pushbutton for start button (provided by SPARC inventory)
 
-## Potential Parts
+## Parts List
 
 The following are a list of parts that could be used to construct the sumo bot.  The prices are approximated per robot.
 
@@ -46,3 +46,15 @@ The following are a list of parts that could be used to construct the sumo bot. 
 * $4 Perma-Protoboard: [Adafruit Perma-Proto Half-sized Breadboard PCB](https://www.amazon.com/Adafruit-Perma-Proto-Half-sized-Breadboard-PCB/dp/B00SK8QR8S/ref=sr_1_1?s=electronics&ie=UTF8&qid=1516580453&sr=1-1&keywords=adafruit+perma+proto)
 
 ~ Total: $46
+
+## Arduino Pin Assignments
+
+* Ultrasonic
+  * Echo: D2
+  * Trigger: D3
+* Servos
+  * Left: D10
+  * Right: D9
+* Line Following Sensor
+  * Left: A7
+  * Right: A6
