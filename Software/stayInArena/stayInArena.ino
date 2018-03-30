@@ -21,6 +21,19 @@ void setup() {
  leftServo.write(90);
  rightServo.attach(9);  
  rightServo.write(90);
+ 
+}
+
+void loop() {
+  goUntilLine();
+  goStraight(-90);
+  delay(500);
+  turnRight(90);
+  delay(500); 
+  stopServos();  
+}
+
+void goUntilLine(){
  goStraight(20);
  while(leftIRValue > threshold && rightIRValue > threshold){
   leftIRValue = analogRead(leftIR);
@@ -31,14 +44,10 @@ void setup() {
   Serial.print(rightIRValue);
   Serial.print("\n");
  }
+ leftIRValue = 1000;
+ rightIRValue = 1000;
  stopServos();
 }
-
-void loop() {
-  
-  
-}
-
 void goStraight(int motorSpeed){
   leftServo.write(90+motorSpeed);
   rightServo.write(90-motorSpeed);
